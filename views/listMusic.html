@@ -1,0 +1,13 @@
+<h3>Music Tracks</h3>
+        <input type='text' id="search-title"/>
+        <button ng-click="search_tracks()">Search</button>
+        <div id="nextpage"><a href="#" ng-click="incrementPage(tracks.next)">Next Page</a></div>
+        <div ng-repeat="track in tracks.results" class="trackInfo">
+            <div>{{ track.title }}</div>
+            <!-- <span class="trackName">{{ track.title }}</span> -->
+            <div class="trackGenre" ng-repeat="genre in track.genres"><a ng-href='#here' ng-click="listGenres(genre.id)">{{ genre.name }}</a></div>
+
+            <div class="rating">{{ track.rating }}</div>
+        		
+            </br>
+        </div>
